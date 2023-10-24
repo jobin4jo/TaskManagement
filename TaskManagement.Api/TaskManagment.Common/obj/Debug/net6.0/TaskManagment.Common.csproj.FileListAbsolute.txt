@@ -1,0 +1,12 @@
+D:\Test\TaskManagement.Api\TaskManagment.Common\bin\Debug\net6.0\TaskManagment.Common.deps.json
+D:\Test\TaskManagement.Api\TaskManagment.Common\bin\Debug\net6.0\TaskManagment.Common.dll
+D:\Test\TaskManagement.Api\TaskManagment.Common\bin\Debug\net6.0\TaskManagment.Common.pdb
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\TaskManagment.Common.csproj.AssemblyReference.cache
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\TaskManagment.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\TaskManagment.Common.AssemblyInfoInputs.cache
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\TaskManagment.Common.AssemblyInfo.cs
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\TaskManagment.Common.csproj.CoreCompileInputs.cache
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\TaskManagment.Common.dll
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\refint\TaskManagment.Common.dll
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\TaskManagment.Common.pdb
+D:\Test\TaskManagement.Api\TaskManagment.Common\obj\Debug\net6.0\ref\TaskManagment.Common.dll

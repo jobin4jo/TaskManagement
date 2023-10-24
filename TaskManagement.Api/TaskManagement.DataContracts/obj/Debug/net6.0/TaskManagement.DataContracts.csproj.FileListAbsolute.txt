@@ -1,0 +1,14 @@
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\bin\Debug\net6.0\TaskManagement.DataContracts.deps.json
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\bin\Debug\net6.0\TaskManagement.DataContracts.runtimeconfig.json
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\bin\Debug\net6.0\TaskManagement.DataContracts.dll
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\bin\Debug\net6.0\TaskManagement.DataContracts.pdb
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.csproj.AssemblyReference.cache
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.AssemblyInfoInputs.cache
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.AssemblyInfo.cs
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.csproj.CoreCompileInputs.cache
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.dll
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\refint\TaskManagement.DataContracts.dll
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.pdb
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\TaskManagement.DataContracts.genruntimeconfig.cache
+D:\Test\TaskManagement.Api\TaskManagement.DataContracts\obj\Debug\net6.0\ref\TaskManagement.DataContracts.dll

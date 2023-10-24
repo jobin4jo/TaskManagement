@@ -1,0 +1,20 @@
+public CREATE TABLE "user" (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(255),
+    role VARCHAR(255),
+    status VARCHAR(255),
+    password VARCHAR(255),
+    phonenumber VARCHAR(15)
+);
+
+Create Table "TaskInformation"(
+	TaskId INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	Title VARCHAR(500),
+	Description VARCHAR(2000),
+	DueDate DATE,
+	Status INT,
+	CreatedBy INT,
+	CreatedOn DATE
+	);
+	
+	select * from "TaskInformation";

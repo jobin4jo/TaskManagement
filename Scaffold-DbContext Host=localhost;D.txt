@@ -1,0 +1,1 @@
+Scaffold-DbContext "Host=localhost;Database=TaskManagmentDB;Username=postgres;Password=123456" Npgsql.EntityFrameworkCore.PostgreSQL -OutputDir Models -context DBContext -Project TaskManagement.DataContracts -force
