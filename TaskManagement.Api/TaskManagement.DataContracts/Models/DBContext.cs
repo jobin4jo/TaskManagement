@@ -35,15 +35,28 @@ public partial class DBContext : DbContext
                 .UseIdentityAlwaysColumn()
                 .HasColumnName("taskid");
             entity.Property(e => e.Createdby).HasColumnName("createdby");
-            entity.Property(e => e.Createdon).HasColumnName("createdon");
+            entity.Property(e => e.Createdon)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("createdon");
+            entity.Property(e => e.Deletedby).HasColumnName("deletedby");
+            entity.Property(e => e.Deletedon)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("deletedon");
             entity.Property(e => e.Description)
                 .HasMaxLength(2000)
                 .HasColumnName("description");
-            entity.Property(e => e.Duedate).HasColumnName("duedate");
+            entity.Property(e => e.Duedate)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("duedate");
             entity.Property(e => e.Status).HasColumnName("status");
+            entity.Property(e => e.Taskstatus).HasColumnName("taskstatus");
             entity.Property(e => e.Title)
                 .HasMaxLength(500)
                 .HasColumnName("title");
+            entity.Property(e => e.Updatedby).HasColumnName("updatedby");
+            entity.Property(e => e.Updatedon)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("updatedon");
         });
 
         modelBuilder.Entity<User>(entity =>
