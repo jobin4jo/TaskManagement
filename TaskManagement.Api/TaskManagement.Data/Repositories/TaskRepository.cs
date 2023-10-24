@@ -29,10 +29,11 @@ public class TaskRepository : ITaskRepository
        
     }
 
-    public async Task<int> DeleteTaskById(int id)
+    public async Task<int> DeleteTaskById(int id, int userId)
     {
         var taskdata = await _context.TaskInformations.FindAsync(id);
         taskdata.Status = 0;
+        taskdata.Deletedby = userId;
         taskdata.Deletedon = DateTime.Now;
         _context.Entry(taskdata).State = EntityState.Modified;
         await _context.SaveChangesAsync();
@@ -57,10 +58,11 @@ public class TaskRepository : ITaskRepository
 
     }
 
-    public async Task<int> UpdateTask(UpdateTaskInformationRequestDTO taskInformationRequest)
+    public async Task<int> UpdateTask(UpdateTaskInformationRequestDTO taskInformationRequest,int userId)
     {
         TaskInformation data = _mapper.Map<TaskInformation>(taskInformationRequest);
         data.Updatedon = DateTime.Now;
+        data.Updatedby = userId;
         data.Status = 1;
         await _context.SaveChangesAsync();
         return data.Taskid;

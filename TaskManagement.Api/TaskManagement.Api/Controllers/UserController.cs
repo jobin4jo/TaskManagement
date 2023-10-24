@@ -58,7 +58,7 @@ namespace TaskManagement.Api.Controllers
             List<User> adminlist = await _userRepository.GetAdminList();
             return Ok(new { data = adminlist });
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost("CreateUserbyAdmin")]
         public async Task<ActionResult>CreateUserByAdmin(UserRequestDTO userReq)
         {
@@ -72,6 +72,7 @@ namespace TaskManagement.Api.Controllers
                 return new CreatedResult(string.Empty, new { Code = 401, Status = false, Message = ex, Data = new { } });
             }
         }
+        [AllowAnonymous]
         [HttpPost("Login")]
         public async Task<ActionResult> Login(userLoginRequestDTO userLogin)
         {
