@@ -17,12 +17,13 @@ public class TaskRepository : ITaskRepository
         _service = service;
     }
 
-    public async  Task<int> CreateTask(TaskInformationRequestDTO taskInformationRequest)
+    public async  Task<int> CreateTask(TaskInformationRequestDTO taskInformationRequest,int UserId)
     {
         TaskInformation taskData = _mapper.Map<TaskInformation>(taskInformationRequest);
         taskData.Status = 1;
         taskData.Taskstatus = 1;   ///Task Asign flag
-        taskData.Createdon = DateTime.Today;
+        taskData.Createdon = DateTime.Now;
+        taskData.Createdby = UserId;
         _context.TaskInformations.Add(taskData);
          await _context.SaveChangesAsync();
         return taskData.Taskid;

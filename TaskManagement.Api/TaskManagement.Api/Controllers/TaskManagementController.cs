@@ -14,13 +14,13 @@ namespace TaskManagement.Api.Controllers
         {
             _taskrepository = taskRepository;   
         }
-        [Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost("CreateTask")]
         public async Task<ActionResult> CreateTaskinformation(TaskInformationRequestDTO taskInformationRequest)
         {
             try
             {
-                var taskData = await _taskrepository.CreateTask(taskInformationRequest);
+                var taskData = await _taskrepository.CreateTask(taskInformationRequest, int.Parse(User.Claims.FirstOrDefault(c => c.Type == "jti").Value));
                 return new CreatedResult(string.Empty, new { Code = 200, Status = true, Message = "DATA_INSERT_SUCCESS", Data = new { data = taskData } });
             }
             catch (Exception ex)
@@ -76,6 +76,10 @@ namespace TaskManagement.Api.Controllers
         [HttpPut("UpdateTask")]
         public async Task<ActionResult>UpdateTaskInformation(UpdateTaskInformationRequestDTO updateTaskRequest)
         {
+
+           ///Taskstatus depends Upon task status we findout. That TaskStatus Flag pass in client side 
+           ///if taskStatus = 1 =>  "Development Progress"
+           ///TaskStatus = 2 => "Development Completed "
             try
             {
                 var updateTask = await _taskrepository.UpdateTask(updateTaskRequest,int.Parse(User.Claims.FirstOrDefault(c => c.Type == "jti").Value)); 

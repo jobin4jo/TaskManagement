@@ -46,6 +46,7 @@ public class UserRepository : IUserRepository
       User userrequest = _mapper.Map<User>(userRequest);
             userrequest.Role = "User";
             userrequest.Status = 1.ToString();
+           
             _context.Users.Add(userrequest);
             await _context.SaveChangesAsync();
             return userrequest;
