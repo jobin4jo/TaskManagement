@@ -8,4 +8,9 @@ namespace TaskManagement.DataContracts;
 
 public  interface IUserRepository
 {
+
+
+
+
+
 }
