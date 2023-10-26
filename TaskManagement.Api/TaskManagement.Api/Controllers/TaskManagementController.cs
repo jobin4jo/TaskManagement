@@ -34,8 +34,8 @@ namespace TaskManagement.Api.Controllers
         {
             try
             {
-                var data = _taskrepository.GetTaskInformationList();
-                return new CreatedResult(string.Empty, new { Code = 200, Status = true, Message = "", Data = data });
+                var data = await _taskrepository.GetTaskInformationList();
+                return Ok( new { Code = 200, Status = true, Message = "", Data = data });
             }
             catch (Exception ex)
             {
@@ -50,7 +50,7 @@ namespace TaskManagement.Api.Controllers
             try
             {
                 var taskInformation = await _taskrepository.GetTaskInformationById(id);
-                return new CreatedResult(string.Empty, new { Code = 200, Status = true, Message = "", Data = taskInformation });
+                return Ok(new { Code = 200, Status = true, Message = "", Data = taskInformation });
             }
             catch (Exception ex)
             {

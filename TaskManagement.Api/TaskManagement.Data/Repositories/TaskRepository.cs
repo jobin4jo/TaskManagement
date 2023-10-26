@@ -23,6 +23,7 @@ public class TaskRepository : ITaskRepository
         taskData.Status = 1;
         taskData.Taskstatus = 1;   ///Task Asign flag
         taskData.Createdon = DateTime.Now;
+        taskData.Duedate = taskInformationRequest.Duedate;
         taskData.Createdby = UserId;
         _context.TaskInformations.Add(taskData);
          await _context.SaveChangesAsync();
