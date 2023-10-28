@@ -12,7 +12,7 @@ public class TaskInformationRequestDTO
 
     public string? Description { get; set; }
 
-    public DateTime Duedate { get; set; }
+    public DateTime? Duedate { get; set; }
     public int? Createdby { get; set; }
 }
 

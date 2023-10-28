@@ -22,8 +22,8 @@ public class TaskRepository : ITaskRepository
         TaskInformation taskData = _mapper.Map<TaskInformation>(taskInformationRequest);
         taskData.Status = 1;
         taskData.Taskstatus = 1;   ///Task Asign flag
-        taskData.Createdon = DateTime.Now;
-        taskData.Duedate = taskInformationRequest.Duedate;
+        taskData.Createdon = DateTime.UtcNow;
+        taskData.Duedate = taskInformationRequest.Duedate.Value.ToUniversalTime();
         taskData.Createdby = UserId;
         _context.TaskInformations.Add(taskData);
          await _context.SaveChangesAsync();
@@ -36,7 +36,7 @@ public class TaskRepository : ITaskRepository
         var taskdata = await _context.TaskInformations.FindAsync(id);
         taskdata.Status = 0;
         taskdata.Deletedby = userId;
-        taskdata.Deletedon = DateTime.Now;
+        taskdata.Deletedon = DateTime.UtcNow;
         _context.Entry(taskdata).State = EntityState.Modified;
         await _context.SaveChangesAsync();
         return taskdata.Taskid;

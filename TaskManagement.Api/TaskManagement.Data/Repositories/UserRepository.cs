@@ -41,7 +41,7 @@ public class UserRepository : IUserRepository
         }
     }
 
-    public async  Task<User> CreateUserbyAdmin(UserRequestDTO userRequest)
+    public async Task<User> CreateUserbyAdmin(UserRequestDTO userRequest)
     {
       User userrequest = _mapper.Map<User>(userRequest);
             userrequest.Role = "User";

@@ -10,6 +10,7 @@ public class UserMappingProfiles : Profile
     {
 
         CreateMap<AdminRegisterationRequestDTO, User>().ReverseMap();
+        CreateMap<UserRequestDTO, User>().ReverseMap();
         
     }
 }

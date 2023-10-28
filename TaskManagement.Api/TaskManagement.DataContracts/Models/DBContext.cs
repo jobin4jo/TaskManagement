@@ -19,9 +19,9 @@ public partial class DBContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseNpgsql("Host=localhost;Database=TaskManagmentDB;Username=postgres;Password=123456");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("Host=localhost;Database=TaskManagmentDB;Username=postgres;Password=123456");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -35,28 +35,20 @@ public partial class DBContext : DbContext
                 .UseIdentityAlwaysColumn()
                 .HasColumnName("taskid");
             entity.Property(e => e.Createdby).HasColumnName("createdby");
-            entity.Property(e => e.Createdon)
-                .HasColumnType("timestamp without time zone")
-                .HasColumnName("createdon");
+            entity.Property(e => e.Createdon).HasColumnName("createdon");
             entity.Property(e => e.Deletedby).HasColumnName("deletedby");
-            entity.Property(e => e.Deletedon)
-                .HasColumnType("timestamp without time zone")
-                .HasColumnName("deletedon");
+            entity.Property(e => e.Deletedon).HasColumnName("deletedon");
             entity.Property(e => e.Description)
                 .HasMaxLength(2000)
                 .HasColumnName("description");
-            entity.Property(e => e.Duedate)
-                .HasColumnType("timestamp without time zone")
-                .HasColumnName("duedate");
+            entity.Property(e => e.Duedate).HasColumnName("duedate");
             entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.Taskstatus).HasColumnName("taskstatus");
             entity.Property(e => e.Title)
                 .HasMaxLength(500)
                 .HasColumnName("title");
             entity.Property(e => e.Updatedby).HasColumnName("updatedby");
-            entity.Property(e => e.Updatedon)
-                .HasColumnType("timestamp without time zone")
-                .HasColumnName("updatedon");
+            entity.Property(e => e.Updatedon).HasColumnName("updatedon");
         });
 
         modelBuilder.Entity<User>(entity =>

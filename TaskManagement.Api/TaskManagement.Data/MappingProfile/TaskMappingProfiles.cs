@@ -9,6 +9,7 @@ public  class TaskMappingProfiles:Profile
     public TaskMappingProfiles()
     {
         CreateMap<TaskInformationRequestDTO, TaskInformation>();
-        CreateMap<TaskInformation, TaskInformationResponseDTO>();
+        CreateMap<TaskInformation, TaskInformationResponseDTO>().ReverseMap();
+     
     }
 }
